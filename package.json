@@ -2,7 +2,7 @@
   "name": "imagedata-manipulator",
   "version": "0.0.1",
   "description": "ImageData manipulator for CanvasRenderingContext2D",
-  "main": "index.js",
+  "main": "imagedatamanipulator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
