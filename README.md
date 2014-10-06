@@ -1,5 +1,5 @@
 # ImageData-Manipulator
----
+
 HTML5 Canvas のユーティリティライブラリです。  
 ImageData のピクセルデータの取り扱いを容易にします。
 
