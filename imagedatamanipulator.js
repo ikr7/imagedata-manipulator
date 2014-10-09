@@ -6,12 +6,14 @@
 		this.data = [];
 
 		for(var i = 0; i < rawImageData.data.length; i += 4){
-			this.data.push([
-				rawImageData.data[i + 0], 
-				rawImageData.data[i + 1], 
-				rawImageData.data[i + 2], 
-				rawImageData.data[i + 3]
-			]);
+			var pixel = new Uint8ClampedArray(4);
+			
+			pixel[0] = rawImageData.data[i + 0];
+			pixel[1] = rawImageData.data[i + 1];
+			pixel[2] = rawImageData.data[i + 2];
+			pixel[3] = rawImageData.data[i + 3];
+
+			this.data.push(pixel);
 		}
 
 		this.length = this.data.length;
