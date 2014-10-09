@@ -2,23 +2,21 @@
 (function(global){
 
 	var ImageDataManipulator = function(rawImageData){
-		
-		this.rawImageData = rawImageData;
 
 		this.data = [];
 
-		for(var i = 0; i < this.rawImageData.data.length; i += 4){
+		for(var i = 0; i < rawImageData.data.length; i += 4){
 			this.data.push([
-				this.rawImageData.data[i + 0], 
-				this.rawImageData.data[i + 1], 
-				this.rawImageData.data[i + 2], 
-				this.rawImageData.data[i + 3]
+				rawImageData.data[i + 0], 
+				rawImageData.data[i + 1], 
+				rawImageData.data[i + 2], 
+				rawImageData.data[i + 3]
 			]);
 		}
 
 		this.length = this.data.length;
-		this.width = this.rawImageData.width;
-		this.height = this.rawImageData.height;
+		this.width = rawImageData.width;
+		this.height = rawImageData.height;
 
 	};
 
