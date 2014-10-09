@@ -15,8 +15,29 @@
 		}
 
 		this.length = this.data.length;
-		this.width = rawImageData.width;
-		this.height = rawImageData.height;
+
+		this._width = rawImageData.width;
+		this._height = rawImageData.height;
+
+		Object.defineProperty(ImageDataManipulator.prototype, 'width', {
+			'get': function(){
+				return this._width;
+			}, 
+			'set': function(value){
+				this.data = this.getRect(0, 0, value, this._height);
+				return value;
+			}
+		});
+
+		Object.defineProperty(ImageDataManipulator.prototype, 'height', {
+			'get': function(){
+				return this._height;
+			}, 
+			'set': function(value){
+				this.data = this.getRect(0, 0, this._width, value);
+				return value;
+			}
+		});
 
 	};
 
